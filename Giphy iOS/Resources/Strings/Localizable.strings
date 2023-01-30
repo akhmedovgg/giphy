@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Giphy
+
+  Created by Sherzod Akhmedov on 30/01/23.
+  
+*/
+
+"CLOSE" = "Close";
+"COPIED" = "Copied";
+"COPY_GIF_LINK" = "Copy GIF link";
+"COPY_GIF" = "Copy GIF";
+"CANCEL" = "Cancel";

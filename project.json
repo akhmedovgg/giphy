@@ -1,0 +1,50 @@
+{
+    "name": "Giphy",
+    "options": {
+        "bundleIdPrefix": "uz.akhmedovgg",
+        "generateEmptyDirectories": true,
+    },
+    "targets": {
+        "Giphy iOS": {
+            "type": "application",
+            "platform": "iOS",
+            "deploymentTarget": "11.0",
+            "settings": {
+                "PRODUCT_BUNDLE_IDENTIFIER": "uz.akhmedovgg.giphy"
+            },
+            "sources": [
+                "Giphy iOS"
+            ],
+            "info": {
+                "path": "Giphy iOS/Metadata/Info.plist",
+                "properties": {
+                    "CFBundleName": "Giphy",
+                    "CFBundleVersion": "1",
+                    "CFBundleShortVersionString": "1.0.0",
+                    "UILaunchStoryboardName": "LaunchScreen",
+                    "UIUserInterfaceStyle": "Light",
+                    "UISupportedInterfaceOrientations": [
+                        "UIInterfaceOrientationPortrait"
+                    ],
+                    "UIRequiresFullScreen": true,
+                    "ITSAppUsesNonExemptEncryption": false,
+                    "UIApplicationSceneManifest": {
+                        "UIApplicationSupportsMultipleScenes": false,
+                        "UISceneConfigurations": {}
+                    }
+                },
+            },
+            "preBuildScripts": [
+                {
+                    "name": "[R.swift] Resource generator",
+                    "shell": "/bin/sh",
+                    "script": "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Giphy iOS/Generated/R.generated.swift\"",
+                    "outputFiles": [
+                        "$SRCROOT/Giphy iOS/Generated/R.generated.swift"
+                    ],
+                    "basedOnDependencyAnalysis": false,
+                }
+            ]
+        }
+    }
+}
